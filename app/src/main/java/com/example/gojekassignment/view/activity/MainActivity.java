@@ -1,8 +1,10 @@
-package com.example.gojekassignment;
+package com.example.gojekassignment.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.gojekassignment.R;
 
 public class MainActivity extends AppCompatActivity {
 
