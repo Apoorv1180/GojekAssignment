@@ -3,6 +3,7 @@ package com.example.gojekassignment.service.repository;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -12,8 +13,13 @@ import com.example.gojekassignment.service.model.RepositoryResponse;
 import com.example.gojekassignment.service.network.ApiService;
 import com.example.gojekassignment.util.Constant;
 
+import java.io.IOException;
 import java.util.List;
 
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -28,9 +34,13 @@ public class DataRepository {
 
 
     private DataRepository(Application application) {
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Constant.getBaseUrl())
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(client)
                 .build();
         apiService = retrofit.create(ApiService.class);
 

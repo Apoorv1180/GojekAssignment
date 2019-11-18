@@ -1,131 +1,151 @@
 package com.example.gojekassignment.service.model;
 
 import java.util.List;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class RepositoryResponse {
 
-@SerializedName("author")
-@Expose
-private String author;
-@SerializedName("name")
-@Expose
-private String name;
-@SerializedName("avatar")
-@Expose
-private String avatar;
-@SerializedName("url")
-@Expose
-private String url;
-@SerializedName("description")
-@Expose
-private String description;
-@SerializedName("language")
-@Expose
-private String language;
-@SerializedName("languageColor")
-@Expose
-private String languageColor;
-@SerializedName("stars")
-@Expose
-private Integer stars;
-@SerializedName("forks")
-@Expose
-private Integer forks;
-@SerializedName("currentPeriodStars")
-@Expose
-private Integer currentPeriodStars;
-@SerializedName("builtBy")
-@Expose
-private List<BuiltBy> builtBy = null;
+    @SerializedName("author")
+    @Expose
+    private String author;
+    @SerializedName("name")
+    @Expose
+    private String name;
+    @SerializedName("avatar")
+    @Expose
+    private String avatar;
+    @SerializedName("url")
+    @Expose
+    private String url;
+    @SerializedName("description")
+    @Expose
+    private String description;
+    @SerializedName("language")
+    @Expose
+    private String language;
+    @SerializedName("languageColor")
+    @Expose
+    private String languageColor;
+    @SerializedName("stars")
+    @Expose
+    private Integer stars;
+    @SerializedName("forks")
+    @Expose
+    private Integer forks;
+    @SerializedName("currentPeriodStars")
+    @Expose
+    private Integer currentPeriodStars;
+    @SerializedName("builtBy")
+    @Expose
+    private List<BuiltBy> builtBy = null;
 
-public String getAuthor() {
-return author;
-}
+    boolean isExpanded = false;
+    int position;
 
-public void setAuthor(String author) {
-this.author = author;
-}
+    public int getPosition() {
+        return position;
+    }
 
-public String getName() {
-return name;
-}
+    public void setPosition(int position) {
+        this.position = position;
+    }
 
-public void setName(String name) {
-this.name = name;
-}
+    public boolean isExpanded() {
+        return isExpanded;
+    }
 
-public String getAvatar() {
-return avatar;
-}
+    public void setExpanded(boolean expanded) {
+        isExpanded = expanded;
+    }
 
-public void setAvatar(String avatar) {
-this.avatar = avatar;
-}
+    public String getAuthor() {
+        return author;
+    }
 
-public String getUrl() {
-return url;
-}
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
-public void setUrl(String url) {
-this.url = url;
-}
+    public String getName() {
+        return name;
+    }
 
-public String getDescription() {
-return description;
-}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-public void setDescription(String description) {
-this.description = description;
-}
+    public String getAvatar() {
+        return avatar;
+    }
 
-public String getLanguage() {
-return language;
-}
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
 
-public void setLanguage(String language) {
-this.language = language;
-}
+    public String getUrl() {
+        return url;
+    }
 
-public String getLanguageColor() {
-return languageColor;
-}
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-public void setLanguageColor(String languageColor) {
-this.languageColor = languageColor;
-}
+    public String getDescription() {
+        return description;
+    }
 
-public Integer getStars() {
-return stars;
-}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-public void setStars(Integer stars) {
-this.stars = stars;
-}
+    public String getLanguage() {
+        return language;
+    }
 
-public Integer getForks() {
-return forks;
-}
+    public void setLanguage(String language) {
+        this.language = language;
+    }
 
-public void setForks(Integer forks) {
-this.forks = forks;
-}
+    public String getLanguageColor() {
+        return languageColor;
+    }
 
-public Integer getCurrentPeriodStars() {
-return currentPeriodStars;
-}
+    public void setLanguageColor(String languageColor) {
+        this.languageColor = languageColor;
+    }
 
-public void setCurrentPeriodStars(Integer currentPeriodStars) {
-this.currentPeriodStars = currentPeriodStars;
-}
+    public Integer getStars() {
+        return stars;
+    }
 
-public List<BuiltBy> getBuiltBy() {
-return builtBy;
-}
+    public void setStars(Integer stars) {
+        this.stars = stars;
+    }
 
-public void setBuiltBy(List<BuiltBy> builtBy) {
-this.builtBy = builtBy;
-}
+    public Integer getForks() {
+        return forks;
+    }
+
+    public void setForks(Integer forks) {
+        this.forks = forks;
+    }
+
+    public Integer getCurrentPeriodStars() {
+        return currentPeriodStars;
+    }
+
+    public void setCurrentPeriodStars(Integer currentPeriodStars) {
+        this.currentPeriodStars = currentPeriodStars;
+    }
+
+    public List<BuiltBy> getBuiltBy() {
+        return builtBy;
+    }
+
+    public void setBuiltBy(List<BuiltBy> builtBy) {
+        this.builtBy = builtBy;
+    }
 
 }
